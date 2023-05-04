@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "receptions",
+  "info": {
+    "singularName": "reception",
+    "pluralName": "receptions",
+    "displayName": "reception"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved"
+      ]
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "receptions"
+    },
+    "lot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lot.lot",
+      "inversedBy": "reception"
+    },
+    "totalCost": {
+      "type": "biginteger"
+    },
+    "payment": {
+      "type": "boolean",
+      "default": false
+    },
+    "comission": {
+      "type": "biginteger"
+    },
+    "cherryPrice": {
+      "type": "biginteger"
+    },
+    "currecnyFixed": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "reception"
+    }
+  }
+}

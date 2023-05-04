@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lots",
+  "info": {
+    "singularName": "lot",
+    "pluralName": "lots",
+    "displayName": "lot"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lastUpdate": {
+      "type": "datetime"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "Cherry",
+        "Parchment",
+        "Green"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "number": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "weight": {
+      "type": "biginteger"
+    },
+    "uom": {
+      "type": "string",
+      "default": "Kg"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "processType": {
+      "type": "string"
+    },
+    "subLocation": {
+      "type": "string"
+    },
+    "reception": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reception.reception",
+      "mappedBy": "lot"
+    }
+  }
+}

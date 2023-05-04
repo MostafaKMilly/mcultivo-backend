@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "accounts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Farmer",
+        "Buyer"
+      ]
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "pending"
+      ]
+    },
+    "completeness": {
+      "type": "biginteger"
+    },
+    "govrmentId": {
+      "type": "biginteger"
+    },
+    "mobileNumber": {
+      "type": "biginteger"
+    },
+    "receptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reception.reception",
+      "mappedBy": "account"
+    }
+  }
+}

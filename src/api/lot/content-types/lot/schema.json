@@ -4,10 +4,11 @@
   "info": {
     "singularName": "lot",
     "pluralName": "lots",
-    "displayName": "lot"
+    "displayName": "lot",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

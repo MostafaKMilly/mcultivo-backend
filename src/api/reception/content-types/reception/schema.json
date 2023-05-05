@@ -4,10 +4,11 @@
   "info": {
     "singularName": "reception",
     "pluralName": "receptions",
-    "displayName": "reception"
+    "displayName": "reception",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

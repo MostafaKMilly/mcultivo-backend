@@ -5,10 +5,9 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "yarn run reset && strapi start",
+    "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "reset" : "yarn strapi admin:reset-user-password --email=m.milly@turnsole.tech --password=Tu#223312"
+    "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {

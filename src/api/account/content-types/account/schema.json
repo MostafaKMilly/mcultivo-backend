@@ -19,7 +19,9 @@
       "type": "enumeration",
       "enum": [
         "Farmer",
-        "Buyer"
+        "Buyer",
+        "Agent",
+        "plot"
       ]
     },
     "firstName": {
